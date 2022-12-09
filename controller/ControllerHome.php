@@ -1,5 +1,5 @@
 <?php
-class Controller
+class ControllerHome
 {
     public function index($page)
     {

@@ -1,5 +1,5 @@
 <?php
 
-define('BASE_URL','http://localhost/jew/');
+define('BASE_URL','http://localhost/jew');
 
 ?>
