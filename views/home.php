@@ -1,96 +1,434 @@
-<div class="container">
-    <div class="rox">
-        <div class="col-md-12 mx">
-            <div class="card">
-                <div class="card-body bg-light">
-                    <table class="table table-hover" style="text-align: center;">
-                        <thead>
-                            <tr>
-                                <th scope="col"> IDC</th>
-                                <th scope="col"> Libellé</th>
-                                <th scope="col">actions</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <?php 
-                            $Cat = new CatégorieController();
-                            $catégorie = $Cat->getallCatégorie();
-                            foreach ($catégorie as $catégorie) : ?>
-                                <tr>
-                                    <th><?php echo $catégorie['ID']; ?></th>
-                                    <td><?php echo $catégorie['Libellé']; ?></td>
-                                    <td>
-                                        <a href="#"><img class="hh" src="views/images/trash.png" style="  width: 20px; height: 20px;"></a>
-                                    </td>
-                                </tr>
-                            <?php endforeach; ?>
-                        <tfoot>
-                            <tr>
-                                <td colspan="3" style="text-align:center;">
-                                    ajouter
-                                </td>
-                            </tr>
-                        </tfoot>
-                        </tbody>
-                    </table>
-                </div>
-            </div>
+    <!-- end header section -->
+    <!-- slider section -->
+    <section class=" slider_section position-relative">
+      <div class="design-box">
+        <img src="views/images/design-1.png" alt="">
+      </div>
+      <div class="slider_number-container d-none d-md-block">
+        <div class="number-box">
+          <span>
+            01
+          </span>
+          <hr>
+          <span class="jwel">
+            J <br>
+            e <br>
+            w <br>
+            e <br>
+            l <br>
+            l <br>
+            e <br>
+            r <br>
+            y
+          </span>
+          <hr>
+          
         </div>
-    </div>
-    <br>
-    <div class="rox">
-        <div class="col-md-12 mx">
-            <div class="card">
-                <div class="card-body bg-light">
-                    <table class="table table-hover" style="text-align: center;">
-                        <thead>
-                            <tr>
-                                <th scope="col"> ID</th>
-                                <th scope="col"> ProductName</th>
-                                <th scope="col"> Discription</th>
-                                <th scope="col">Quantity</th>
-                                <th scope="col">Price</th>
-                                <th scope="col"> img</th>
-                                <th scope="col">IDC</th>
-                                <th scope="col">actions</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <?php
-                                $data = new ProduitController();
-                                $produit = $data->getAllProduit(); 
-                                foreach ($produit as $produit) : ?>
-                                <tr>
-                                    <th><?php echo $produit['ID']; ?></th>
-                                    <td><?php echo $produit['ProductName']; ?></td>
-                                    <td><?php echo $produit['Discription']; ?></td>
-                                    <td><?php echo $produit['Quantity']; ?></td>
-                                    <td><?php echo $produit['Price']; ?></td>
-                                    <td><img src="<?php echo $produit['img']; ?>" alt="<?php echo $produit['ProductName']; ?>"></td>
-                                    <td><?php echo $produit['IDC']; ?></td>
-                                    <td>
-
-                                        <form action="" method="POST">
-                                            <input type="hidden" name="id" value="<?php echo $produit["ID"]?>">
-                                            <!-- <input type="submit" name="delete" value="Delete"> -->
-
-                                            
-                                            <!--Nous alons mettre l'id de chaque produits dans ce lien (editproduct.php?ID=)pour supprimer -->
-                                            <button name="delete" value="Delete"><img class="hh" src="./views/images/trash.png" style="  width: 20px; height: 20px;"></button>
-                                        </form>
-                                    </td>
-                                </tr>
-                            <?php endforeach; ?>
-                        <tfoot>
-                            <tr>
-                                <td colspan="8" style="text-align:center;">
-                                <a href="ajouterProduit">ajouter</a>
-                                </td>
-                            </tr>
-                            </tbody>
-                    </table>
+      </div>
+      <div class="container">
+        <div>
+          <div class="carousel-inner">
+            <div class="carousel-item active">
+              <div class="row">
+                <div class="col-md-6">
+                  <div class="detail_box">
+                    <h2>
+                      <span> New Collection</span>
+                      <hr>
+                    </h2>
+                    <h1>
+                      Jewellery
+                    </h1>
+                    <p>
+                      Lorem ipsum dolor sit amet consec tetur adipiscing elit elit at felislacinia
+                      aptent taciti sociosqu ad litora torquent per conubia nostra
+                    </p>
+                    <div>
+                      <a href="">Shop Now</a>
+                    </div>
+                  </div>
                 </div>
+                <div class="col-md-6">
+                  <div class="img-box">
+                    <img src="views/images/slider-img.png" alt="">
+                  </div>
+                </div>
+              </div>
             </div>
+            <!-- <div class="carousel-item ">
+              <div class="row">
+                <div class="col-md-6">
+                  <div class="detail_box">
+                    <h2>
+                      <span> New Collection</span>
+                      <hr>
+                    </h2>
+                    <h1>
+                      Jewellery
+                    </h1>
+                    <p>
+                      Lorem ipsum dolor sit amet consec tetur adipiscing elit elit at felislacinia
+                      aptent taciti sociosqu ad litora torquent per conubia nostra
+                    </p>
+                    <div>
+                      <a href="">Shop Now</a>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <div class="img-box">
+                    <img src="images/slider-img.png" alt="">
+                  </div>
+                </div>
+              </div>
+            </div> -->
+            <!-- <div class="carousel-item ">
+              <div class="row">
+                <div class="col-md-6">
+                  <div class="detail_box">
+                    <h2>
+                      <span> New Collection</span>
+                      <hr>
+                    </h2>
+                    <h1>
+                      Jewellery
+                    </h1>
+                    <p>
+                      Lorem ipsum dolor sit amet consec tetur adipiscing elit elit at felislacinia
+                      aptent taciti sociosqu ad litora torquent per conubia nostra
+                    </p>
+                    <div>
+                      <a href="">Shop Now</a>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <div class="img-box">
+                    <img src="images/slider-img.png" alt="">
+                  </div>
+                </div>
+              </div>
+            </div> -->
+          </div>
         </div>
+      </div>
+
+    </section>
+    <!-- end slider section -->
+  </div>
+
+  <!-- item section -->
+
+  <div class="item_section layout_padding2">
+    <div class="container">
+      <div class="item_container">
+        <div class="box">
+          <div class="price">
+            <h6>
+              Best PRICE
+            </h6>
+          </div>
+          <div class="img-box">
+            <img src="views/images/i-1.png" alt="">
+          </div>
+          <div class="name">
+            <h5>
+              Bracelet
+            </h5>
+          </div>
+        </div>
+        <div class="box">
+          <div class="price">
+            <h6>
+              Best PRICE
+            </h6>
+          </div>
+          <div class="img-box">
+            <img src="views/images/i-2.png" alt="">
+          </div>
+          <div class="name">
+            <h5>
+              Ring
+            </h5>
+          </div>
+        </div>
+        <div class="box">
+          <div class="price">
+            <h6>
+              Best PRICE
+            </h6>
+          </div>
+          <div class="img-box">
+            <img src="views/images/i-3.png" alt="">
+          </div>
+          <div class="name">
+            <h5>
+              Earings
+            </h5>
+          </div>
+        </div>
+      </div>
     </div>
-</div>
+  </div>
+
+  <!-- end item section -->
+
+  <!-- about section -->
+
+  <section class="about_section layout_padding2-top layout_padding-bottom">
+    <div class="design-box">
+      <img src="views/images/design-2.png" alt="">
+    </div>
+    <div class="container">
+      <div class="row">
+        <div class="col-md-6">
+          <div class="detail-box">
+            <div class="heading_container">
+              <h2>
+                About Jewellery Shop
+              </h2>
+            </div>
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
+              dolore magna aliqua. Ut enim ad minim veniam, quis nostrudLorem ipsum dolor sit amet, consectetur
+              adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
+              veniam, quis nostrud
+            </p>
+            <div>
+              <a href="about">
+                Read More
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="img-box">
+            <img src="views/images/about-img.png" alt="">
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- end about section -->
+
+  <!-- price section -->
+
+  <section class="price_section layout_padding">
+    <div class="container">
+      <div class="heading_container">
+        <h2>
+          Our Jewellery Price
+        </h2>
+      </div>
+      <div class="price_container">
+        <div class="box">
+          <div class="name">
+            <h6>
+              Diamond Ring
+            </h6>
+          </div>
+          <div class="img-box">
+            <img src="views/images/p-1.png" alt="">
+          </div>
+          <div class="detail-box">
+            <h5>
+              $<span>1000.00</span>
+            </h5>
+            <a href="">
+              Buy Now
+            </a>
+          </div>
+        </div>
+        <div class="box">
+          <div class="name">
+            <h6>
+              Diamond Ring
+            </h6>
+          </div>
+          <div class="img-box">
+            <img src="views/images/i-2.png" alt="">
+          </div>
+          <div class="detail-box">
+            <h5>
+              $<span>1000.00</span>
+            </h5>
+            <a href="">
+              Buy Now
+            </a>
+          </div>
+        </div>
+        <div class="box">
+          <div class="name">
+            <h6>
+              Diamond Ring
+            </h6>
+          </div>
+          <div class="img-box">
+            <img src="views/images/i-3.png" alt="">
+          </div>
+          <div class="detail-box">
+            <h5>
+              $<span>1000.00</span>
+            </h5>
+            <a href="">
+              Buy Now
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="d-flex justify-content-center">
+        <a href="gallery" class="price_btn">
+          See More
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- end price section -->
+
+  <!-- ring section -->
+
+  <section class="ring_section layout_padding">
+    <div class="design-box">
+      <img src="views/images/design-1.png" alt="">
+    </div>
+    <div class="container">
+      <div class="ring_container layout_padding2">
+        <div class="row">
+          <div class="col-md-5">
+            <div class="detail-box">
+              <h4>
+                special
+              </h4>
+              <h2>
+                Wedding Ring
+              </h2>
+              <a href="">
+                Buy Now
+              </a>
+            </div>
+          </div>
+          <div class="col-md-7">
+            <div class="img-box">
+              <img src="views/images/ring-img.jpg" alt="">
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- end ring section -->
+
+  <!-- client section -->
+
+  <section class="client_section">
+    <div class="container">
+      <div class="heading_container">
+        <h2>
+          Testimonial
+        </h2>
+      </div>
+      <h4 class="secondary_heading">
+        What is says our customer
+      </h4>
+      <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <div class="client_container">
+              <div class="client-id">
+                <div class="img-box">
+                  <img src="views/images/client.png" alt="">
+                </div>
+                <div class="name">
+                  <h5>
+                    Aliqua
+                  </h5>
+                  <h6>
+                    Consectetur adipiscing
+                  </h6>
+                </div>
+              </div>
+              <div class="detail-box">
+                <p>
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
+                  dolore magna aliqua. Ut enim ad minim veniam, quis nostrudLorem ipsum
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <div class="client_container">
+              <div class="client-id">
+                <div class="img-box">
+                  <img src="views/images/client.png" alt="">
+                </div>
+                <div class="name">
+                  <h5>
+                    Aliqua
+                  </h5>
+                  <h6>
+                    Consectetur adipiscing
+                  </h6>
+                </div>
+              </div>
+              <div class="detail-box">
+                <p>
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
+                  dolore magna aliqua. Ut enim ad minim veniam, quis nostrudLorem ipsum
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <div class="client_container">
+              <div class="client-id">
+                <div class="img-box">
+                  <img src="views/images/client.png" alt="">
+                </div>
+                <div class="name">
+                  <h5>
+                    Aliqua
+                  </h5>
+                  <h6>
+                    Consectetur adipiscing
+                  </h6>
+                </div>
+              </div>
+              <div class="detail-box">
+                <p>
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
+                  dolore magna aliqua. Ut enim ad minim veniam, quis nostrudLorem ipsum
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <a class="carousel-control-prev" href="#carouselExampleControls" role="button" id="prev" data-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="sr-only">Previous</span>
+        </a>
+        <a class="carousel-control-next" href="#carouselExampleControls" role="button" id="next" data-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="sr-only">Next</span>
+        </a>
+      </div>
+
+    </div>
+  </section>
+  <script>
+    let prev=document.getElementById("prev");
+    let next=document.getElementById("next");
+    prev.style.visibility="hidden";
+    prev.addEventListener('click',function(){
+      next.style.visibility="visible";
+      prev.style.visibility="hidden";
+    });
+    next.addEventListener('click',function(){
+      prev.style.visibility="visible";
+      next.style.visibility="hidden";
+      
+    });
+  </script>
+

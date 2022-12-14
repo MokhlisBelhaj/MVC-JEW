@@ -2,7 +2,7 @@
 require_once 'views/includes/header.php';
 require_once './autoload.php';
 $home = new ControllerHome();
-$pages=['home','about','gallery','contact','ajouterProduit'];
+$pages=['home','about','gallery','contact','ajouterProduit','updat','login','gestion','addCategorie'];
 if (isset($_GET['page'])){
     if (in_array($_GET['page'],$pages)){
         $page = $_GET['page'];

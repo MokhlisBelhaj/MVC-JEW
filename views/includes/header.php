@@ -46,16 +46,19 @@
             <div class="d-flex ml-auto flex-column flex-lg-row align-items-center">
               <ul class="navbar-nav  ">
                 <li class="nav-item active">
-                  <a class="nav-link" href="index.php">Home <span class="sr-only">(current)</span></a>
+                  <a class="nav-link" href="home">Home <span class="sr-only">(current)</span></a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link" href="views/about.php"> About</a>
+                  <a class="nav-link" href="about"> About</a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link" href="gallery.php"> Gallery</a>
+                  <a class="nav-link" href="gallery"> Gallery</a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link" href="contact.php"> Contact</a>
+                  <a class="nav-link" href="contact"> Contact</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="login"> login</a>
                 </li>
               </ul>
 

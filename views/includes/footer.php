@@ -1,4 +1,5 @@
- <!-- info section -->
+<br><br><br><br>
+<!-- info section -->
  <section class="info_section ">
   <div class="container">
     <div class="info_container">
@@ -42,29 +43,8 @@
         </div>
       </div>
       <div class="info_form">
-        <div class="d-flex justify-content-center">
-          <h5 class="info_heading">
-            Newsletter
-          </h5>
-        </div>
-        <form action="">
-          <div class="email_box">
-            <label for="email2">Enter Your Email</label>
-            <input type="text" id="email2">
-          </div>
-          <div>
-            <button>
-              subscribe
-            </button>
-          </div>
-        </form>
       </div>
       <div class="info_social">
-        <div class="d-flex justify-content-center">
-          <h5 class="info_heading">
-            Follow Us
-          </h5>
-        </div>
         <div class="social_box">
           <a href="">
             <img src="images/fb.png" alt="">
