@@ -40,13 +40,13 @@
     <div class="rox">
         <div class="col-md-12 mx">
             <div class="card">
-                <div class="card-body bg-light">
+                <div class="card-body bg-light table-responsive">
                     <table class="table table-hover" style="text-align: center;">
                         <thead>
                             <tr>
                                 <th scope="col"> ID</th>
                                 <th scope="col"> ProductName</th>
-                                <th scope="col"> Discription</th>
+                                <th scope="col">Discription</th>
                                 <th scope="col">Quantity</th>
                                 <th scope="col">Price</th>
                                 <th scope="col"> img</th>
